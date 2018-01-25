@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Train</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/employee_style.css">
+</head>
+<body>
+
+  <!-- ****************** jumbotron ********************** -->
+  <div class="container">
+    <div style="background-color: black; color: white" class="jumbotron">
+      <h1>Train</h1>
+      <h3>A Comprehensive Directory of Billable Hours</h3>      
+    </div>     
+  </div>
+
+  <!-- ******************* container ********************* -->
+  <div class="container">
+    <div class="panel panel-default">
+      <div class="panel-heading"
+      <h2 style="color: white;">Current Employee</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table"> <!-- ******************* table ********************* -->
+        <thead>
+          <tr>
+            <th scope="col">Employee Name:</th>
+            <th scope="col">Role:</th>
+            <th scope="col">Start Date:</th>
+            <th scope="col">Months Worked:</th>
+            <th scope="col">Monthly Rate ($):</th>
+            <th scope="col">Total Billed ($):</th>
+          </tr>
+        </thead>
+        <tbody id="recent-employees">
+        </tbody>
+      </table> <!-- ******************* table ********************* -->
+    </div>
+  </div>
+    <form id="main-form"> <!-- ******************* form ********************* -->
+      <div class="form-group">
+        <label for="pwd">Employee Name:</label>
+        <input type="text" class="form-control" id="employee-name" placeholder="employee-role" name="employee-role">
+      </div>
+      <div class="form-group">
+        <label for="pwd">Employee Role:</label>
+        <input type="text" class="form-control" id="employee-role" placeholder="employee-role" name="employee-role">
+      </div>
+      <div class="form-group">
+        <label for="pwd">Start Date:</label>
+        <input type="text" class="form-control" id="start-date" placeholder="start-date" name="start-date">
+      </div>
+      <div class="form-group">
+        <label for="email">Rate:</label>
+        <input type="number" class="form-control" id="rate" placeholder="rate" name="rate">
+      </div>
+
+
+      <!-- ******************* buttons ********************* -->
+      <button type="submit" class="btn btn-success"> Add</button>
+      <button id ="clear-results" type="submit" class="btn btn-default">Clear Results</button>
+    </form> <!-- ******************* end of form ********************* -->
+  </div>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/moment@2.20.1/moment.min.js"></script>
+  <script src="assets/js/logic.js"></script>
+</body>
+</html>
